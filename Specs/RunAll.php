@@ -5,17 +5,17 @@ error_reporting(E_ALL | E_STRICT);
 require_once 'PHPUnit/Framework.php';
 require_once 'PHPUnit/TextUI/TestRunner.php';
 
-require_once '../Source/Types/Type.php';
-require_once '../Source/Types/Iterable.php';
-require_once '../Source/Types/ArrayObject.php';
-require_once '../Source/Types/Array2.php';
-require_once '../Source/Types/String.php';
+require_once '../Source/Type.php';
+require_once '../Source/Iterable.php';
+require_once '../Source/ArrayObject.php';
+require_once '../Source/Array2.php';
+require_once '../Source/String.php';
 
-require_once 'Types/Type.php';
-require_once 'Types/Iterable.php';
-require_once 'Types/ArrayObject.php';
-require_once 'Types/Array2.php';
-require_once 'Types/String.php';
+require_once './Type.php';
+require_once './Iterable.php';
+require_once './ArrayObject.php';
+require_once './Array2.php';
+require_once './String.php';
 
 class RunAll {
 	
