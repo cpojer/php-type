@@ -4,8 +4,10 @@ namespace Type;
 
 class ArrayObject extends Iterable implements \IteratorAggregate, \ArrayAccess, \Countable {
 	
-	public function __construct($data){
-		$this->setData(method_exists($data, 'toArray') ? $data->toArray() : $data);
+	public function __construct($data = null){
+		if (method_exists($data, 'toArray')) $data = $data->toArray();
+		
+		$this->setData($data ?: array());
 	}
 	
 	public function __invoke(){
