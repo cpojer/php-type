@@ -1,0 +1,2 @@
+DIRECTORY=$(cd `dirname $0` && pwd)
+phpunit --no-globals-backup "$DIRECTORY/RunAll.php"
