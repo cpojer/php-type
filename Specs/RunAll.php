@@ -11,7 +11,7 @@ spl_autoload_register(function($className) use ($namespace){
 	$className = explode('\\', $className);
 	if ($className[0] == $namespace) array_shift($className);
 	
-	$file = __DIR__ . '/../Source/' . implode('\\', $className) . '.php';
+	$file = __DIR__ . '/../Source/' . implode('/', $className) . '.php';
 	if (file_exists($file)) require_once $file;
 });
 

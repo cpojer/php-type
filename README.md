@@ -1,7 +1,12 @@
-PHP-Types
-=========
+PHP-Types (PHP 5.3)
+===================
 
 banana banana banana
+
+Specs
+=====
+
+* Run the "run" script in the Specs directory
 
 Array Example
 =============
@@ -46,4 +51,4 @@ String Example
 	
 	String::from('Hello {name}')->substitute(array('name' => 'Banana')); // Hello Banana
 
-See the Source or Specs for more examples
+See the Source or Specs for more
