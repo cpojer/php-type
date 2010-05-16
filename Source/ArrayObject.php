@@ -67,9 +67,8 @@ class ArrayObject extends Iterable implements \IteratorAggregate, \ArrayAccess, 
 	}
 	
 	public function remove($value){
-		if (in_array($value, $this->data)){
+		if (in_array($value, $this->data))
 			$this->data = array_diff_key($this->data, array_flip(array_keys($this->data, $value, true)));
-		}
 		
 		return $this;
 	}
