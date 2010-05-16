@@ -3,13 +3,11 @@ PHP-Types (PHP 5.3)
 
 banana banana banana
 
-Specs
-=====
+### Specs
 
 * Run the "run" script in the Specs directory
 
-Array Example
-=============
+### Array Example
 	
 	use Type;
 	
@@ -36,8 +34,7 @@ Array Example
 	ArrayObject::from($someArray);
 	Array2::from($someArray);
 
-String Example
-==============
+### String Example
 
 	use Type;
 	
