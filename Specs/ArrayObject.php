@@ -155,6 +155,18 @@ class ArrayObjectTest extends \PHPUnit_Framework_TestCase {
 		$this->assertEquals($sliced(), array());
 	}
 	
+	public function testRemove(){
+		$this->assertEquals($this->array->remove(2)->toArray(), array(1, 2 => 3));
+		$this->assertEquals($this->array->remove(5)->toArray(), array(1, 2 => 3));
+		$this->assertEquals($this->array->remove('3')->toArray(), array(1, 2 => 3));
+	}
+	
+	public function testClean(){
+		$array = new ArrayObject(array(0, null, '0', 1, '', 2, 3, false));
+		// ->values() because the array is not being reindexed
+		$this->assertEquals($array->clean()->values()->toArray(), array('0', 1, 2, 3));
+	}
+	
 	public function testKeys(){
 		$keys = $this->array->keys();
 		$this->assertTrue($keys instanceOf ArrayObject);

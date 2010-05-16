@@ -66,6 +66,18 @@ class ArrayObject extends Iterable implements \IteratorAggregate, \ArrayAccess, 
 		return static::from(array_slice($this->data, $begin, $end));
 	}
 	
+	public function remove($value){
+		if (in_array($value, $this->data)){
+			$this->data = array_diff_key($this->data, array_flip(array_keys($this->data, $value, true)));
+		}
+		
+		return $this;
+	}
+	
+	public function clean(){
+		return $this->remove(null)->remove(false)->remove(0)->remove('');
+	}
+	
 	// Keys / Values
 	public function keys(){
 		return static::from(array_keys($this->data));
