@@ -39,4 +39,6 @@ abstract class Type implements \Serializable {
 		return new $name($data);
 	}
 	
+	protected static function getClassName(){}
+	
 }
