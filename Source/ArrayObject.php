@@ -126,7 +126,11 @@ class ArrayObject extends Iterable implements \IteratorAggregate, \ArrayAccess, 
 	
 	// ArrayAccess
 	public function offsetSet($key, $value){
-		$this->data[$key] = $value;
+		if ($key === null) {
+			$this->data[] = $value;
+		} else {
+			$this->data[$key] = $value;
+		}
 	}
 	
 	public function offsetGet($key){
